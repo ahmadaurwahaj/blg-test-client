@@ -1,4 +1,4 @@
-import { Check, Search, Bot, FileText } from 'lucide-react';
+import {  Search, Bot, FileText } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { URLInputForm } from '@/components/analysis/URLInputForm';
 import DotGrid from '../components/DotGrid';
