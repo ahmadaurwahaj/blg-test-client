@@ -99,7 +99,7 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
     const totalDuration = steps.reduce((sum, step) => sum + step.duration, 0);
     const progressPerMs = 100 / totalDuration;
 
-    // Progress animation
+
     const startTime = Date.now();
     const animateProgress = () => {
       const elapsed = Date.now() - startTime;
@@ -113,7 +113,7 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
 
     animateProgress();
 
-    // Step progression
+
     const progressSteps = async () => {
       for (let i = 0; i < steps.length; i++) {
         setCurrentStep(i);
@@ -125,7 +125,7 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
         });
       }
       
-      // Call onComplete after all steps
+
       if (onComplete) {
         setTimeout(onComplete, 500);
       }
@@ -139,7 +139,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
     };
   }, [onComplete]);
 
-  // Fact rotation
   useEffect(() => {
     const factInterval = setInterval(() => {
       setCurrentFactIndex((prev) => (prev + 1) % facts.length);
@@ -156,7 +155,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
 
   return (
     <div className="relative min-h-screen bg-linear-to-b from-slate-900 to-slate-800 flex items-center justify-center p-4 overflow-hidden">
-      {/* DotGrid Background */}
       <div className="absolute inset-0">
         <DotGrid
           dotSize={2}
@@ -170,10 +168,9 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
         />
       </div>
 
-      {/* Content */}
+
       <div className="relative z-10 w-full max-w-2xl">
         <Card className="p-8 md:p-12 bg-white/90 backdrop-blur">
-          {/* Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center mb-4">
               <img src={LoadingGif} alt="Loading" className="w-24 h-24" />
@@ -187,7 +184,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
             </p>
           </div>
 
-          {/* Progress Bar */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-medium text-slate-700">
@@ -200,7 +196,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
             <Progress value={progress} className="h-3" />
           </div>
 
-          {/* Steps */}
           <div className="space-y-2">
             {steps.map((step, index) => {
               const status = getStepStatus(index);
@@ -216,7 +211,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
                       : 'bg-gray-300  border-slate-200'
                   }`}
                 >
-                  {/* Icon */}
                   <div
                     className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       status === 'active'
@@ -234,8 +228,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
                       step.icon
                     )}
                   </div>
-
-                  {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <h3
@@ -265,8 +257,6 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
               );
             })}
           </div>
-
-          {/* Fun Facts */}
           <div className="mt-8 p-4  rounded-lg min-h-[80px] transition-all duration-500">
             <div className="flex items-start gap-4">
               <img src={AnimationGif} alt="AI Animation" className="w-16 h-16 shrink-0" />

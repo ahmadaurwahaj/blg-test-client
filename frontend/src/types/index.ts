@@ -5,6 +5,57 @@ export type LLMProvider = 'openai' | 'gemini';
 export type RecommendationType = 'article' | 'reddit' | 'medium' | 'wikipedia';
 export type Priority = 'high' | 'medium' | 'low';
 
+// API Response Types (matching backend API.md)
+export interface APIAnalysisResponse {
+  visibilityScore: number;
+  marketShare: number;
+  totalPrompts: number;
+  promptsWithBrand: number;
+  brandRanking: APIBrandRanking[];
+  citationDomains: APICitationDomain[];
+  perPromptResults: APIPromptResult[];
+}
+
+export interface APIBrandRanking {
+  name: string;
+  mentions: number;
+  share: number;
+}
+
+export interface APICitationDomain {
+  domain: string;
+  count: number;
+}
+
+export interface APIPromptResult {
+  query: string;
+  stage: BuyingStage;
+  response: string;
+  citations: APICitation[];
+  brands: APIBrandMention[];
+  targetBrandFound: boolean;
+  targetBrandMentions: number;
+}
+
+export interface APICitation {
+  url: string;
+  title: string;
+  domain: string;
+}
+
+export interface APIBrandMention {
+  name: string;
+  mentions: number;
+  context: string;
+}
+
+// Frontend Display Types
+export interface AnalysisResults {
+  targetUrl: string;
+  targetBrand: string;
+  apiResponse: APIAnalysisResponse;
+}
+
 export interface AnalysisRequest {
   url: string;
   normalizedUrl: string;
@@ -56,14 +107,4 @@ export interface AnalysisSummary {
   totalPrompts: number;
   totalBrands: number;
   totalCitations: number;
-}
-
-export interface AnalysisResults {
-  targetBrand: string;
-  targetUrl: string;
-  prompts: GeneratedPrompt[];
-  openAIResults: LLMResponse[];
-  geminiResults: LLMResponse[];
-  summary: AnalysisSummary;
-  recommendations: Recommendation[];
 }
