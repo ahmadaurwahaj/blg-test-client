@@ -13,7 +13,7 @@ export function URLInputForm({ onSubmit, isLoading = false }: URLInputFormProps)
   const { url, normalizedUrl, error, setUrl, validate } = useURLValidation();
   const [showPreview, setShowPreview] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (validate()) {
@@ -43,7 +43,7 @@ export function URLInputForm({ onSubmit, isLoading = false }: URLInputFormProps)
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           disabled={isLoading}
-          className="h-14 flex-1 bg-white/95 backdrop-blur text-base border-slate-300 focus:border-primary"
+          className="h-14 flex-1 bg-white/95 backdrop-blur text-black text-base border-slate-300 focus:border-primary"
           aria-label="Website URL"
           aria-invalid={!!error}
           aria-describedby={error ? 'url-error' : undefined}
