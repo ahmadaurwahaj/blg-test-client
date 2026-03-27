@@ -1,50 +1,37 @@
 # LLM Visibility Analysis Tool
 
-A React application for analyzing brand visibility in AI language models like ChatGPT and Gemini.
+This is a React app that checks how visible your brand is in AI tools like ChatGPT and Gemini. You just enter a URL and it shows you the results.
 
-## Development
+## Getting Started
+
+First, install the dependencies:
 
 ```bash
 npm install
+```
+
+Then start the dev server:
+
+```bash
 npm run dev
 ```
 
-The application will be available at: `http://localhost:5173/free-tools/llm-analysis`
+Once it is running, open your browser and go to `http://localhost:5173/free-tools/llm-analysis`.
 
-## Build
+## Building for Production
 
 ```bash
 npm run build
 ```
 
-The build output will be in the `dist` directory, configured for deployment at `/free-tools/llm-analysis/`.
+The built files will go into the `dist` folder. The app is set up to run at `/free-tools/llm-analysis/`.
 
-## Routing
+## Pages
 
-The application is hosted at `/free-tools/llm-analysis` and includes:
-- Landing page with URL input form
-- Analysis page with loading states
-- Results page with detailed visibility metrics
+The app has three pages:
 
-## Project Structure
+- **Landing page** where you enter the URL you want to check
+- **Analysis page** that shows a loading screen while it fetches results
+- **Results page** where you can see all the visibility data
 
-- `src/pages/` - Main page components (Landing, Analysis, Results)
-- `src/components/` - Reusable UI components
-- `src/lib/` - Utilities and helper functions
-- `src/types/` - TypeScript type definitions
-
-## Adding UI Components
-
-To add shadcn/ui components:
-
-```bash
-npx shadcn@latest add button
-```
-
-Components will be placed in `src/components/ui/`.
-
-## Using Components
-
-```tsx
-import { Button } from "@/components/ui/button"
-```
+The app is hosted at `/free-tools/llm-analysis`.
