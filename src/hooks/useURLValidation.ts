@@ -6,7 +6,7 @@ interface URLValidationResult {
   isValid: boolean;
   error: string | null;
   setUrl: (url: string) => void;
-  validate: () => boolean;
+  validate: () => string | null;
   reset: () => void;
 }
 
@@ -33,11 +33,11 @@ export function useURLValidation(): URLValidationResult {
     }
   }, []);
 
-  const validate = useCallback((): boolean => {
+  const validate = useCallback((): string | null => {
     if (!url.trim()) {
       setError('Please enter a website URL');
       setIsValid(false);
-      return false;
+      return null;
     }
 
     try {
@@ -48,17 +48,17 @@ export function useURLValidation(): URLValidationResult {
       if (!urlObj.hostname.includes('.')) {
         setError('Please enter a valid domain (e.g., example.com)');
         setIsValid(false);
-        return false;
+        return null;
       }
 
       setNormalizedUrl(normalized);
       setError(null);
       setIsValid(true);
-      return true;
+      return normalized;
     } catch {
       setError('Please enter a valid URL (e.g., https://example.com)');
       setIsValid(false);
-      return false;
+      return null;
     }
   }, [url, normalizeURL]);
 

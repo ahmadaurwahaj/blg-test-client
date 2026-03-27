@@ -16,8 +16,9 @@ export function URLInputForm({ onSubmit, isLoading = false }: URLInputFormProps)
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    if (validate()) {
-      onSubmit(normalizedUrl);
+    const result = validate();
+    if (result) {
+      onSubmit(result);
     }
   };
 
@@ -28,8 +29,8 @@ export function URLInputForm({ onSubmit, isLoading = false }: URLInputFormProps)
 
   const handleInputBlur = () => {
     if (url.trim()) {
-      const isValid = validate();
-      setShowPreview(isValid);
+      const result = validate();
+      setShowPreview(!!result);
     }
   };
 
