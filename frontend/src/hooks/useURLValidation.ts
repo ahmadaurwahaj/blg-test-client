@@ -20,14 +20,17 @@ export function useURLValidation(): URLValidationResult {
     let normalized = inputUrl.trim().toLowerCase();
     
 
-    normalized = normalized.replace(/\/$/, '');
-    
-
     if (!normalized.startsWith('http://') && !normalized.startsWith('https://')) {
       normalized = 'https://' + normalized;
     }
     
-    return normalized;
+
+    try {
+      const urlObj = new URL(normalized);
+      return `${urlObj.protocol}//${urlObj.hostname}`;
+    } catch {
+      return normalized.replace(/\/$/, '');
+    }
   }, []);
 
   const validate = useCallback((): boolean => {

@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/free-tools/llm-analysis",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/free-tools/llm-analysis/:path*",
