@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Check, Loader2, Sparkles, FileText, BarChart3 } from 'lucide-react';
+import { Check, Loader2 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { Card } from '@/components/ui/card';
-import { OpenAILogo } from '@/components/common/OpenAILogo';
-import { GeminiLogo } from '@/components/common/GeminiLogo';
 import LoadingGif from '@/assets/Loading.gif';
 import AnimationGif from '@/assets/animation.gif';
 import DotGrid from '@/components/DotGrid';
@@ -12,7 +10,6 @@ interface Step {
   id: string;
   label: string;
   description: string;
-  icon: React.ReactNode;
   duration: number;
 }
 
@@ -32,35 +29,30 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
       id: 'analyzing',
       label: 'Analyzing website',
       description: 'Scanning your website content and structure...',
-      icon: <Sparkles className="w-5 h-5" />,
       duration: 2000,
     },
     {
       id: 'generating',
       label: 'Generating prompts',
       description: 'Creating 5 AI prompts across buying journey stages...',
-      icon: <FileText className="w-5 h-5" />,
       duration: 2500,
     },
     {
       id: 'querying-openai',
       label: 'Querying ChatGPT',
       description: 'Testing prompts with OpenAI ChatGPT...',
-      icon: <OpenAILogo className="w-5 h-5" />,
       duration: 3000,
     },
     {
       id: 'querying-gemini',
       label: 'Querying Gemini',
       description: 'Testing prompts with Google Gemini...',
-      icon: <GeminiLogo className="w-5 h-5" />,
       duration: 3000,
     },
     {
       id: 'calculating',
       label: 'Calculating scores',
       description: 'Analyzing brand mentions and citations...',
-      icon: <BarChart3 className="w-5 h-5" />,
       duration: 2000,
     },
   ];
@@ -203,29 +195,23 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
               return (
                 <div
                   key={step.id}
-                  className={`flex items-start gap-4 p-4 rounded-lg transition-all duration-300 ${
+                  className={`flex items-start gap-4 p-4 rounded-lg border transition-all duration-300 ${
                     status === 'active'
-                      ? 'bg-primary/15  border-primary/20'
+                      ? 'bg-slate-50 border-slate-200'
                       : status === 'completed'
-                      ? 'bg-gray-100'
-                      : 'bg-gray-300  border-slate-200'
+                      ? 'bg-white border-slate-100'
+                      : 'bg-white border-slate-100'
                   }`}
                 >
-                  <div
-                    className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      status === 'active'
-                        ? 'bg-primary text-white animate-pulse'
-                        : status === 'completed'
-                        ? 'bg-primary text-white'
-                        : 'bg-slate-200 text-slate-400'
-                    }`}
-                  >
+                  <div className="shrink-0 w-6 h-6 flex items-center justify-center">
                     {status === 'completed' ? (
-                      <Check className="w-5 h-5 font-bold" />
+                      <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+                        <Check className="w-3 h-3 text-white" />
+                      </div>
                     ) : status === 'active' ? (
-                      <div className="animate-spin">{step.icon}</div>
+                      <Loader2 className="w-5 h-5 text-slate-400 animate-spin" />
                     ) : (
-                      step.icon
+                      <div className="w-5 h-5 rounded-full border border-slate-300" />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -233,17 +219,14 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
                       <h3
                         className={`font-semibold ${
                           status === 'active'
-                            ? 'text-primary'
+                            ? 'text-slate-900'
                             : status === 'completed'
-                            ? 'text-emerald-700'
+                            ? 'text-slate-700'
                             : 'text-slate-400'
                         }`}
                       >
                         {step.label}
                       </h3>
-                      {status === 'active' && (
-                        <Loader2 className="w-4 h-4 text-primary animate-spin" />
-                      )}
                     </div>
                     <p
                       className={`text-sm ${
