@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/free-tools/llm-analysis/:path*",
+      "destination": "/free-tools/llm-analysis/index.html"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/free-tools/llm-analysis/(.*)",
+      "dest": "/free-tools/llm-analysis/index.html"
+    }
+  ]
+}

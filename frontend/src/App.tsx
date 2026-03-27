@@ -59,11 +59,11 @@ export function App() {
   }, [data, error]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/free-tools/llm-analysis">
       <TooltipProvider>
         <Routes>
           <Route
-            path="/free-tools/llm-analysis"
+            path="/"
             element={
               appState === 'analyzing' ? (
                 <AnalysisPage
@@ -136,7 +136,7 @@ export function App() {
               )
             }
           />
-          <Route path="*" element={<Navigate to="/free-tools/llm-analysis" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </TooltipProvider>
     </BrowserRouter>
