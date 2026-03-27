@@ -36,7 +36,7 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
               </h1>
               
               <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Enter your website URL and we will analyze all the technical issues you need to fix in order to improve your chances of being cited by LLMs.
+                Check how visible your brand is when people ask AI tools like ChatGPT and Gemini for recommendations.
               </p>
             </div>
 
