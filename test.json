@@ -1,0 +1,403 @@
+{
+  "type": "result",
+  "data": {
+    "overallVisibilityScore": 10,
+    "comparison": {
+      "gemini": { "visibilityScore": 20, "marketShare": 4.761904761904762 },
+      "chatgpt": { "visibilityScore": 0, "marketShare": 0 }
+    },
+    "totalPromptsAnalyzed": 5,
+    "gemini": {
+      "llm": "gemini",
+      "visibilityScore": 20,
+      "marketShare": 4.761904761904762,
+      "totalPrompts": 5,
+      "promptsWithBrand": 1,
+      "brandRanking": [
+        { "name": "adobe color", "mentions": 2, "share": 9.523809523809524 },
+        { "name": "paletton", "mentions": 2, "share": 9.523809523809524 },
+        { "name": "coolors.co", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "dribbble", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "pinterest", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "awwwards", "mentions": 1, "share": 4.761904761904762 },
+        {
+          "name": "webaim contrast checker",
+          "mentions": 1,
+          "share": 4.761904761904762
+        },
+        { "name": "coolors", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "colorspace", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "wixel", "mentions": 1, "share": 4.761904761904762 },
+        {
+          "name": "muzli ai color combination generator",
+          "mentions": 1,
+          "share": 4.761904761904762
+        },
+        { "name": "palettemaker", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "canva", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "color hunt", "mentions": 1, "share": 4.761904761904762 },
+        {
+          "name": "schemecolor.com",
+          "mentions": 1,
+          "share": 4.761904761904762
+        },
+        { "name": "gelato", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "vistaprint", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "moo print", "mentions": 1, "share": 4.761904761904762 },
+        { "name": "davey & krista", "mentions": 1, "share": 4.761904761904762 }
+      ],
+      "citationDomains": [
+        { "domain": "vertexaisearch.cloud.google.com", "count": 34 }
+      ],
+      "perPromptResults": [
+        {
+          "query": "What are some good color combinations for a calming bedroom?",
+          "stage": "awareness",
+          "response": "For a calming bedroom, consider color combinations that evoke serenity, tranquility, and relaxation. The most frequently recommended hues fall into categories of blues, greens, grays, and soft neutrals, often paired with crisp whites or subtle pastels.\n\nHere are some good color combinations for a calming bedroom:\n\n**1. Serene Blues with Neutrals**\nSoft blues are widely recognized for their calming effects, mimicking the sky and ocean to promote peace and reduce stress.\n* **Soft Blue and Gray:** A classic and effective combination, pairing soft blues with wispy or light grays creates a tranquil and sophisticated atmosphere. Light gray serves as an excellent neutral that complements blue tones.\n* **Icy Blue, Warm Woods, and Beige Linens:** An icy, pale blue can be balanced with the warmth of wood furniture and beige textiles for a peaceful and balanced space.\n* **Powder Blue or Pale Aqua:** These soft shades of blue are ideal for creating a soothing atmosphere, perfect for unwinding.\n\n**2. Earthy Greens with Natural Tones**\nGreens, particularly muted and natural shades, connect us to the outdoors and evoke feelings of peace and harmony.\n* **Sage Green and Creamy White:** Soft, muted greens like sage or seafoam bring a sense of tranquility. Pairing them with creamy off-whites enhances the natural, restorative feel.\n* **Celery or Light Pistachio with Warm Accents:** These subtle greens, when paired with warm wood tones or warm-hued carpets, create a grounded and elegant bedroom.\n* **Gray-Green:** A soft, grayish-green encourages feelings of tranquility and a connection to nature.\n\n**3. Gentle Grays with Contrasting or Complementary Shades**\nGray is a versatile neutral that promotes calm and can add a modern touch.\n* **Light Gray and White:** Light grays provide a sophisticated backdrop, and when combined with soft whites, can create a clean and serene environment.\n* **Warm Gray (Taupe/Mushroom) and Ivory:** Warm grays like taupe or mushroom tones offer depth without being overstimulating, creating a soft and cozy environment. These pair well with ivory for an inviting ambiance.\n* **Charcoal Gray and Light Furniture:** A deep, muted charcoal gray can act as a grounding color, especially when contrasted with light-colored furniture, such as a cream or white bed set.\n\n**4. Soft Neutrals for a Warm Sanctuary**\nNeutral tones like tan, beige, and ivory create a sense of warmth, comfort, and understated luxury.\n* **Beige, Taupe, and Ivory:** These versatile hues create a serene and inviting ambiance. When combined with soft, textured fabrics and natural materials, they enhance a relaxing vibe.\n* **Tan and White:** Tan is a neutral tone that promotes comfort and helps put the mind at ease. It pairs well with white for a restful space.\n* **Mushroom and Taupe:** These warm neutrals offer depth and create a soft, comfortable, and relaxing environment.\n\n**5. Muted Lavenders and Pastels**\nWhile some brighter shades can be energizing, muted pastels can contribute to a calming atmosphere.\n* **Muted Lavender or Lilac:** Lavender is known for its stress-relieving properties, making soft shades ideal for creating a peaceful and serene environment, especially when balanced with warm wood tones.\n* **Pastel Pink or Yellow Accents:** While intense pinks and yellows can be energizing, pastel versions, when used as accents with cooler main colors (like dark gray or blue), can add a touch of interest without boosting energy levels.\n\nWhen choosing your calming bedroom colors, remember that soft, delicate hues are often more relaxing than highly pigmented ones. Layering colors, materials, and light also contributes significantly to a truly tranquil space.",
+          "citations": [
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE88sTiQxt0ZUzPaojMKu83AX0d_hcj8XjOcvjys3WsBOZH9lQWpzBB_5uTfYzjxPpCCIQNhZdO-BFARK9z7cqLVmOED2FJFodd5mCdXvnorqc1xlLy9jjka4simuxtkZVPhnRBeMcusTHj63iQ_AR-8ie8IWXN4CI7nZam3pG55uTi2BXnOg==",
+              "title": "southshorefinelinens.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsjO52Qd9Iv1wya51zJRjmZUXI5y7Oo8ECO5cmFDSDE_UKdOQFXMYHMz83s1XFT6dXp0iugOIs5bpTzVLvOLBe6EQmQw6PmtDsW1mBAsuV7NSEifJ_oIHRjvJMp9-V3XP5VgyyXmn8A-itPESbjvPDsev87dm3RhrgrTy7DyhUUyQGv5EN_q-sy6geBoiXbLeBmY7B9Xt4sMI=",
+              "title": "creativecolorsanddesigns.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCYhTLld0pF_iCdBeS--mDfAeAepMBHN8NrvMCqbVPq1M5cHzy11hybTX2zafd-3AbaaAiyeK5QzmAU7i6dD9m-Fk7tgNDcN2AVikAzKcmn3vu9500xdDpBCqGmLg33EtQsrP_7cEsh62qvNoKTPKSFJDi0T0EATFwDa28rNMlcTYjIf7EjsQU",
+              "title": "sleepfoundation.org",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMatB6hqGVnRz5GF3O-U4fj4aRIrg5alitKFYZXtqVx0UWkovG4NNHkD6NSB6ZJHNJCXWKJk_pa57k8thFHDE5SB3zWAYzT3N5bRd8OV2y0o1eHD6EsgzuBtyb2UM2RvmM1S05xhkmV75kRq5dqL0Pf-0jo19C1FWBy2hf-uJlC3pe5KaOmNqEVCLeIuwSMv_6sbsqQhXzcgFw45_AELcBlb821dRqug==",
+              "title": "advancedhouseplans.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETxsH9nZXCQOSWQ3mExuWztJfaQEemqaBrImqZSTl6N1z_nSDeQjqwy0aPIcmjLRt6OvTyAuLJJkuDna5CChfVGcsr--VZGBm5UpEdngisz--9_-Bi4PNqlfVEKW_zspJrVaKPo9B9jc7A_MI9dKCvJbat6DLUPkXAcqxI",
+              "title": "clare.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP_zpkNVY86iBbr39HyBh3Z3PBL600ewzRfBbmWB75sOnbH6jDVWh6VEiJjy6V1JuUR5wLeL5mv73rq7yN5Ua9-sPSFjt3pPFvUQgPeXjbOHyOq7Bnw6pDfTGEJ41ir-_MhPF99ogNaWpqxDwDu7UPHa29tX4ghwLlQQs-YOixOLb_aM1y",
+              "title": "camillestyles.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTf1uzJENWufZ2xRAHlsna-3K5UcDefmgX4N82XX2yLKnXTSdotM8r3MJ2Zyo6BUSd-aSFApCNYZSvMzPwDlXmP50dOOyhUXeEOOlzCzAT5Qx9z4S0s__Lq868M7WGoWBlKVhGjjkgy5suwdzRfJE66UP2CLZ9aTjhrpo=",
+              "title": "benjaminmoore.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUUAdh2pr5C3ecAsEuKXm9KB3KRu2s1pB1rSCjqkX5CP2SrT3gkOGla-6DoTz2fJ6KG2iZg7ElhjCH2abP71HplPDn0IgcJOBm1mN0YId0sWKuq-DTcVAqVoY8niDCRGL0K1LVILgIzgNxw7ikIw7HZjYqGp2phmswr7RAIbUwlTEd8pZLwsren486Yk_R2PPZ-0ZTgadVuZI=",
+              "title": "houzz.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhak99hYpZQeHZiiTWkGqaoxeIL8Lv4ZX1A6sijYhXbNFiiYWnNyxe9mowyRhwBpzzVJ-o86X3se2MIdIXVWp3Hfs3PShFU6r7S_FOsnp4NWsJQ96RcF5u2za9pdwrUxnqyQlGZA__vdJORFLn-LTWuxCnD22OkpTDdFzXl1A4QCKiSTXebJVGD7Mvk_y8dLLiOVuxx5DYRjSo4xOqhjJ5A8IB",
+              "title": "everythinghomedesigns.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNJTAUXwwHS5AJknbevX1LX31U3aoUJldVGWmsapMMNi4oqqj44O1eeNxpFQZUunt2yh6jjMYixcyBS5l5tbi5SSscRPv5dvnFph2qlXUZmTmNmqQAdiOgDKGbvwUkkqajqpRBpb8C3G9P-dMCu5rmSRfZdpR6DYh5prXb5047fFLinwJvPikgBiJJQm5Zd8R68MtCC-iODk4=",
+              "title": "benjaminmoore.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7elkGjV4rI565DDrGgShncsoXv9RYFCv66GVIdVKxbXm1_WmMzlMyreR-5xEwMPWRup3xvfSnG1_CQV_N5voiaZFpKsKdBVCRSKktMw2aj-0A_kGxnV0PAPOxZiFO-_wsMdtUNA==",
+              "title": "youtube.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            }
+          ],
+          "brands": [],
+          "targetBrandFound": false,
+          "targetBrandMentions": 0
+        },
+        {
+          "query": "I'm struggling to find a cohesive color scheme for my new website redesign, can you help?",
+          "stage": "problem*focused",
+          "response": "It can definitely be a challenge to find a cohesive color scheme! To help you, I need a little more information. Tell me about your website and your brand:\n\n1. **What is the purpose of your website?** (e.g., e-commerce, portfolio, blog, informational, service-based)\n2. **What industry are you in?**\n3. **What feeling or emotion do you want to evoke?** (e.g., trustworthy, playful, sophisticated, modern, calm, energetic)\n4. **Do you have any existing brand colors or a logo you need to work with?**\n5. **Who is your target audience?**\n\nIn the meantime, here are some general tips and resources that can help you get started:\n\n**Tips for Choosing a Color Scheme:**\n\n* **Understand Color Psychology:** Different colors evoke different emotions. For example, blue often conveys trust and professionalism, green suggests nature and growth, and red can signify passion or urgency.\n* **Start with a Base Color:** Often, this will be a color from your logo or a dominant color that represents your brand's primary message.\n* **Use the 60-30-10 Rule:** This is a classic design principle. Your dominant color should make up 60% of your scheme, a secondary color 30%, and an accent color 10%.\n* **Consider Contrast and Accessibility:** Ensure good contrast between text and background colors for readability, especially for users with visual impairments.\n* **Look for Inspiration:** Browse other websites, design portfolios, or even real-world objects and nature for color combinations that appeal to you.\n* **Keep it Simple:** Too many colors can make a website feel chaotic. Aim for 3-5 main colors in your palette.\n\n**Helpful Resources and Tools:**\n\n* **Color Wheel Generators:** These tools help you find harmonious color combinations based on color theory (e.g., complementary, analogous, triadic schemes).\n * Adobe Color\n * Coolors.co\n * Paletton\n* **Website Color Palette Inspiration:**\n * Dribbble (search for \"color palette\")\n * Pinterest\n * Awwwards (for design inspiration generally)\n* **Accessibility Checkers:**\n * WebAIM Contrast Checker\n\nOnce I have a better understanding of your specific needs, I can provide more tailored recommendations!",
+          "citations": [],
+          "brands": [
+            { "name": "Adobe Color", "mentions": 1 },
+            { "name": "Coolors.co", "mentions": 1 },
+            { "name": "Paletton", "mentions": 1 },
+            {
+              "name": "Dribbble",
+              "mentions": 1,
+              "context": "search for \"color palette\""
+            },
+            { "name": "Pinterest", "mentions": 1 },
+            {
+              "name": "Awwwards",
+              "mentions": 1,
+              "context": "for design inspiration generally"
+            },
+            { "name": "WebAIM Contrast Checker", "mentions": 1 }
+          ],
+          "targetBrandFound": false,
+          "targetBrandMentions": 0
+        },
+        {
+          "query": "Where can I find free resources for modern and trending color palettes?",
+          "stage": "solution_focused",
+          "response": "You can find a wide array of free resources for modern and trending color palettes across various websites and tools designed for designers, artists, and anyone seeking color inspiration:\n\n**1. Color Palette Generators & Tools:**\n\nThese platforms allow you to create, explore, and sometimes extract color palettes:\n* **Coolors** is a popular and fast color palette generator that lets you create schemes by pressing the spacebar, explore millions of existing palettes, extract colors from images, and check accessibility. It also offers a \"Color Bot\" for AI-powered suggestions.\n* **Adobe Color** (formerly Adobe Kuler) provides a color wheel to generate harmonious palettes using various color harmonies like analogous, triadic, and complementary. You can also explore current color trends across different creative industries like fashion, graphic design, and UI/UX.\n* **ColorSpace** helps you find matching color schemes and create gradients by simply entering a color.\n* **Wixel** generates custom palettes by analyzing hues from an uploaded image, and allows you to fine-tune each color.\n* **Muzli AI Color Combination Generator** creates color palettes based on text input, translating words or phrases into visual schemes.\n* **Paletton** (formerly Color Scheme Designer) is a tool for creating color combinations using a color wheel, suitable for both beginners and professionals.\n* **PaletteMaker** is a free AI color palette generator that allows you to preview colors on various designs like UI/UX, logos, and illustrations, and export them in multiple formats.\n\n**2. Curated Trending Palettes and Inspiration:**\n\nSeveral websites offer curated collections of trending and modern color schemes:\n* **Canva** provides thousands of color combinations and articles on website color schemes, offering inspiration from various styles like professional, warm, bold, and cheerful. Their \"Color palette generator\" also allows you to create palettes.\n* **Color Hunt** features a collection of hand-picked, trending color palettes for design and art projects.\n* **SchemeColor.com** offers thousands of beautiful color combinations created by professional artists and graphic designers, along with tools like a color scheme generator and image-to-color palette converter.\n* **Gelato** and **Vistaprint** publish articles on trending colors and forecasted palettes for upcoming years, providing insights into modern hues and their applications in design and branding.\n* **MOO Print** provides lists of professional color combinations to inspire designs, along with advice on how to find colors that go together using the color wheel.\n* **Davey & Krista** offer articles with trending color palettes specifically for websites, often highlighting themes and predictions for the upcoming year.",
+          "citations": [
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8NmEvMSokWqu1FE2VGvw67Wv5ZwtBBQ1Wnvwcjq5nQ32xWTsRqxiefg2tkvNVTglgqe85typ8_OI6qzE-wZZ99Poqq40T17JUZPDCVQmLLfCmaOqBqKFiftT7xCMKLK6jXliGT91ETLqNRe3s4mX6ohZ6i1Kk-lH9_VVedOfCWcc-VyZkfIoz",
+              "title": "wix.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhSvRIXXQFdecspO4nYNxJYCKE8KvWD-fbCGqJY6It0xPjpKuJGiWY3cTzuX5GoswqN8_HNNpgtiuF34ykTOcnuTCE8fI5YL-tkMYP3RM=",
+              "title": "coolors.co",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBHST4nTdJdUeeuRY_33PngMXD2gdu1QJA3xF03ddgwB04BNwzR7B_umfJ1geV3sC2vw6figrd8hEl8PoJVaX0jLDHT72oqWg-sp3x6kEFXU6KMxHl6lvWrAEuGN5C_w2weTaCSQ==",
+              "title": "adobe.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkLXJ8YJk-pGdVUFEw40NpsV_dmiGGWOR-mj4UcS1hUTwsAAPLd6l9_V30mlNA4WPzr4ypDkGGtFhQnClDbGdyA5X9LIRy2kioDle2m5Vn9TB2FLa2ahw9kw==",
+              "title": "adobe.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBiq-ug7TnriA1-FkzbDp1i-3aFkl0Ka9iA14qg9PoFOARF0IQ9tMb23D_QQ_PqkywfBLcGDnhImIOgXwdE9iQQEsaiIEvFK-0BqI7msYyakA=",
+              "title": "mycolor.space",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH6LVb6HCeCKLrDleBMYrxU_bQg_K7YGxBruW3AjmxAVPTwJspR_fzu3bFzD_UhMihxb6sI0QGafJ_YCqS3Wk1k4bYwVwpHTUL-6kiK0beFQ==",
+              "title": "paletton.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2XIpyUpQZviLwncXEjFdDxPzBLQ8WjHL5YR0yZrmMPWp9d4U623wpvKM3vwVMI45Hbk9kLEIBxyatKWYziCD2ufNRm7d4bQSw9BzVHQ0tQGKe-i0=",
+              "title": "palettemaker.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQwIH6qUrp7a5Y7hJ-LWB3MPvYwZGTfrPINZttMtFXNO8hka0SQtpuG9NvmIiz5z5rQX4hHDjh161O_M_RBxFCeAytxpQLZFqDzuuVhxli6KNAMhQWuByhsZQv1tSS6hsmZkoc4uGnVlw2YLxb",
+              "title": "canva.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVZWzucZxFBP2wzhG4mGTyJXt7rnIRv-Xf7zUcSBYYn0AU38V7ViMvpWfeV0_Gi0qVyU9VplpINx0guOiVvdjB3MmYuOXTFkFBAjtOYqqOpSSl3naqG8HavQwhSkl5SE3LdgTsctd1",
+              "title": "canva.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYzayO1nZN-V1s0nFmpsmli1a-u_cj6g0dCIqB81oaOK4YsvVC3PArOoKFfg9wq1COftF98wyECGPnT9Ab0_UfGI_XeLIgsnc90dgD7iNEuWsQXpw7rRe-TC8m4GMRI62wjm6bLst9xiYHEgeicIEj",
+              "title": "canva.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_YCs2LM1daVOsikXxtLC9NA65-iLv9TwjTda-OoOaFISNf1CjaTX0t-bZsda_bCLSo2Nzc51lV7NvgkOGiMRNty9ZDhr5WaieH5DnMZIu0w==",
+              "title": "colorhunt.co",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8FoZt8hu5itx1Yek3KRfBb9Qv_djrpXdnM_JNLQJItJbViJn0CB_B8-YU85CpRcFSUIJP9D7lgMfIg5Vs_zCm143oaJzpBQyoXbqCgBzGUxb85h3V5-w=",
+              "title": "schemecolor.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsgZp_ntmp42VJRGnbLVrOG6sPOmW68p2vMl5oXDUlj4teGC3h1dGkhKOUAwM2ghqK2yslzgnmie0NOQNDDIUYE9-oSiUvQxIbRgw01epaJsXBdAd-8hnypXxb02BUJrIvc4RSljs=",
+              "title": "gelato.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4bE3yAHgWkqooGRFCvYcy8swNee5z6zOK2g6QG_5RF7YaZEHn6E88fpcfwC5F6cdrtHYAHGvj8LZxsvkLa4_yztEaci7W3j8x3OIgq5ywAYtbxX2A6WjJnv5xGKsA8-qIzKwFdck=",
+              "title": "vistaprint.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5YV_f41lFCnwwgWbfARKBneoKi2ITCA4GyVEv8Uz5MKxQO2cCx0wy7aNEzOV8n9xNJhvT23uMdzf2h_7CYzGwEpEGO_8LN5PBfv_MJLT9lRjaZdQg-Dd0Q9N5wEqJCt9B9Mlgj28N6jJiQYkxyXuIqP2bzl-zDO136vD4Ohejp_2A8NTB6W63",
+              "title": "moo.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaLclPyZ0EwlHWniCXSExDAmyoF82KWvtrqeA09fpvFIIMHeD39OM9HNPdtGzonAqFZc14jO9_Z8bmxCreBtuFotN4YmEgbsxGHSX1wFoELxcOau_4kFMiqzEM-CkZskNjkEeTEm3uVDmpNZWWkHanaSUB-CFxjsQDdTppAhep",
+              "title": "daveyandkrista.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            }
+          ],
+          "brands": [
+            {
+              "name": "Coolors",
+              "mentions": 1,
+              "context": "popular and fast color palette generator"
+            },
+            {
+              "name": "Adobe Color",
+              "mentions": 1,
+              "context": "provides a color wheel to generate harmonious palettes"
+            },
+            {
+              "name": "ColorSpace",
+              "mentions": 1,
+              "context": "helps you find matching color schemes and create gradients"
+            },
+            {
+              "name": "Wixel",
+              "mentions": 1,
+              "context": "generates custom palettes by analyzing hues from an uploaded image"
+            },
+            {
+              "name": "Muzli AI Color Combination Generator",
+              "mentions": 1,
+              "context": "creates color palettes based on text input"
+            },
+            {
+              "name": "Paletton",
+              "mentions": 1,
+              "context": "tool for creating color combinations using a color wheel"
+            },
+            {
+              "name": "PaletteMaker",
+              "mentions": 1,
+              "context": "free AI color palette generator"
+            },
+            {
+              "name": "Canva",
+              "mentions": 1,
+              "context": "provides thousands of color combinations and articles on website color schemes"
+            },
+            {
+              "name": "Color Hunt",
+              "mentions": 1,
+              "context": "collection of hand-picked, trending color palettes for design and art projects"
+            },
+            {
+              "name": "SchemeColor.com",
+              "mentions": 1,
+              "context": "offers thousands of beautiful color combinations"
+            },
+            {
+              "name": "Gelato",
+              "mentions": 1,
+              "context": "publish articles on trending colors and forecasted palettes"
+            },
+            {
+              "name": "Vistaprint",
+              "mentions": 1,
+              "context": "publish articles on trending colors and forecasted palettes"
+            },
+            {
+              "name": "MOO Print",
+              "mentions": 1,
+              "context": "provides lists of professional color combinations"
+            },
+            {
+              "name": "Davey & Krista",
+              "mentions": 1,
+              "context": "offer articles with trending color palettes specifically for websites"
+            }
+          ],
+          "targetBrandFound": true,
+          "targetBrandMentions": 1
+        },
+        {
+          "query": "Show me examples of vibrant and playful color palettes suitable for a children's brand.",
+          "stage": "consideration",
+          "response": "Here are some examples of vibrant and playful color palettes suitable for a children's brand, along with a brief description of the feeling each evokes:\n\n**1. \"Tropical Adventure\"**\n* **Colors:** Bright Teal, Sunny Yellow, Coral Pink, Lush Green, Sky Blue\n* **Feeling:** Energetic, adventurous, playful, reminiscent of a tropical paradise. Great for brands focused on outdoor play, exploration, or exotic animals.\n* **Hex Codes (Examples):** #00CED1 (Bright Teal), #FFD700 (Sunny Yellow), #FF7F50 (Coral Pink), #32CD32 (Lush Green), #87CEEB (Sky Blue)\n\n**2. \"Sweet Treat Delight\"**\n* **Colors:** Bubblegum Pink, Mint Green, Lavender Purple, Lemon Yellow, Creamy White\n* **Feeling:** Whimsical, sweet, gentle, and comforting. Ideal for brands related to baby products, confectionery, or soft toys.\n* **Hex Codes (Examples):** #FFC0CB (Bubblegum Pink), #98FB98 (Mint Green), #E6E6FA (Lavender Purple), #FFFACD (Lemon Yellow), #F8F8FF (Creamy White)\n\n**3. \"Primary Pop\"**\n* **Colors:** True Red, Royal Blue, Bright Yellow, Kelly Green, Orange\n* **Feeling:** Bold, classic, strong, and direct. Excellent for educational brands, building blocks, or active play toys.\n* **Hex Codes (Examples):** #FF0000 (True Red), #0000FF (Royal Blue), #FFFF00 (Bright Yellow), #008000 (Kelly Green), #FFA500 (Orange)\n\n**4. \"Rainbow Brights\"**\n* **Colors:** Hot Pink, Electric Blue, Lime Green, Vivid Orange, Purple, Yellow\n* **Feeling:** Joyful, imaginative, boundless energy, and creativity. Perfect for art supplies, general children's entertainment, or anything celebrating diversity.\n* **Hex Codes (Examples):** #FF69B4 (Hot Pink), #00BFFF (Electric Blue), #32CD32 (Lime Green), #FF4500 (Vivid Orange), #8A2BE2 (Purple), #FFD700 (Yellow)\n\n**5. \"Pastel Dreamland\"**\n* **Colors:** Pale Aqua, Soft Peach, Lilac, Muted Yellow, Light Grey\n* **Feeling:** Calm, gentle, innocent, and dreamy. Best suited for newborn brands, lullabies, or cozy apparel.\n* **Hex Codes (Examples):** #AFEEEE (Pale Aqua), #FFDAB9 (Soft Peach), #C8A2C8 (Lilac), #FDFD96 (Muted Yellow), #D3D3D3 (Light Grey)\n\nWhen choosing a palette, consider the specific message and target audience within the children's demographic (e.g., toddlers vs. older children) to best resonate with your brand's identity.",
+          "citations": [],
+          "brands": [],
+          "targetBrandFound": false,
+          "targetBrandMentions": 0
+        },
+        {
+          "query": "Generate a list of popular four-color palettes for a tech startup branding.",
+          "stage": "decision",
+          "response": "Here are several popular four-color palettes suitable for tech startup branding, incorporating modern trends and psychological associations:\n\n**1. Modern Professionalism with a Pop**\nThis palette blends traditional corporate trustworthiness with a contemporary, energetic accent.\n* **Midnight Blue** (#101356): Conveys stability, authority, and reliability—qualities often sought in tech solutions.\n* **Bright Blue** (#81FFFF): Adds a vibrant, forward-thinking, and innovative feel, standing out in digital applications.\n* **Off-White** (#FBFDF6): Provides a clean, minimalist background that enhances readability and a fresh aesthetic.\n* **Purple** (#9674D4): Introduces a touch of creativity, sophistication, and uniqueness, ideal for forward-thinking startups.\n\n**Why it works for a tech startup:** This palette offers a balanced approach. The blues establish trust and professionalism, which are crucial for tech companies handling data or offering critical services. The bright blue adds a modern, dynamic edge, while purple injects creativity without being overly playful. Off-white ensures clarity and a clean user experience.\n\n**2. Dynamic Energy & Innovation**\nThis palette uses bold contrasts and energetic hues to signify innovation and a modern, vibrant brand.\n* **Vibrant Blue** (e.g., #006BDF or similar electric blue): Represents professionalism, energy, and stability, a popular choice in tech.\n* **Neon Lime/Spearmint Green** (e.g., #63B76C or similar bright green): Projects a sense of innovation, growth, and freshness, often associated with cutting-edge technology or sustainability.\n* **Deep Navy/Charcoal** (e.g., #040F49 or #464646): Provides a strong, sophisticated anchor, often used for backgrounds in dark mode interfaces, conveying depth and elegance.\n* **Soft Lilac/Violet** (e.g., similar to the soft violet mentioned in): Offers a softer, creative contrast, balancing the intensity of the brighter colors and adding a unique personality.\n\n**Why it works for a tech startup:** This combination is ideal for startups aiming to convey a sense of excitement and being at the forefront of technology. The vibrant blue and neon green create a strong, memorable visual impact, while the deep navy or charcoal adds gravitas. The soft lilac prevents the palette from becoming overwhelming and introduces a hint of thoughtful design.\n\n**3. Approachable & User-Centric Tech**\nThis palette combines warm and inviting tones with professional anchors to create a friendly yet competent brand image.\n* **True Blue/Cornflower Blue** (e.g., #4973F2 or similar): Signifies trust, dependability, and intelligence, making the brand feel reliable.\n* **Bold Orange/Amber Yellow** (e.g., #F2911B or #FFB400): Adds warmth, enthusiasm, and can highlight calls to action effectively, making the brand approachable and user-friendly.\n* **Soft Beige/Off-White** (e.g., #FBFDF6 or similar warm neutral): Creates a welcoming and clean background, promoting clarity and ease of use.\n* **Charcoal/Dark Gray** (e.g., #0F1026 or similar): Provides strong contrast for text and important elements, grounding the palette with a sense of seriousness and professionalism.\n\n**Why it works for a tech startup:** This palette is excellent for startups that want to appear innovative and trustworthy, but also friendly and easy to engage with. The orange or yellow injects personality and draws attention, while the blue maintains a sense of corporate credibility. The neutrals ensure a clean and user-friendly interface.",
+          "citations": [
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp-o9nVU2kK7FFwamqbk_nMMG3WArSExNeUMISuGefaoL2jQHlApiYdx2RdXEiJglKRVx-sngNjfRLPOiKqGRf4UnNN32JfB1wTHFEyAJNuqO12p1WzT4enuunHPXJduZlPVFl2ffUHcqfqQ==",
+              "title": "stephcorrigan.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJLnNVAsdOFdUDubjKUyXiHLl81cx6Fg2eWYhTmYGs6wpcQQHcDtAMEIx2vlUCLKrWKZXnQNKTu5C3oHELfqUuqjhu9jXXhreJE50TN7Ms-X1UQ2UqauVrYogR1S-NWv5YA5MtcrZficPynCeH8LXigdW-N25R3ymSzok=",
+              "title": "desantisbreindel.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcAUi9nGxOYgR5psc_4Uk1cEmGFHh-DntQy-HjRdaxuF2skoBZLz58MlerWJ_nITFVhU89_rQ9-EXN7kblzL0MZkfPE4kx7cxp0j_FrFHT7uJz56ZbZtLaQV8haVeQxctpRxXrcnG5ERAKkbI3tAqKINeYgPimYvTKaxTHsQ==",
+              "title": "shinecreative.co.uk",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHheLbhbo2eCC3NVrOOWqw0ytjzjjgdlXP5OtrVP0bWBVm0Uf8oewI-vKkhoki-HDI3C9ZZxKy-Huv0mryZu7iIo-GnacsDn1aSlKpBb9E_uoWtSEkWIJEs*-J85bbTHvcAKk-RLKMh4wtym4T1re3mLW7dHENuEm6K*IpQuSEJNJXqXowFRxyi3uv9p6Kja4uXlvxyefnQ9YQATIgWo7s-tvdKJXnVwaBvkage",
+              "title": "medium.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbBCAlIBnzWHEv25whQRTIIz7m-kAeShO7FTsepJSVD9Q3_z4D20eDg1mbEF-Sez0HJnak1ParQUlIPeyB5JbFyXJHFKuQjT5fe2fRPXXbqepOuJ838MaTutGJSYhKU96I3mgnllOPuvXsvTGKfCpVm9chsyoWgoiCKrqfjz2G",
+              "title": "shutterstock.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxIzu6rOuZzfaGtW5BbfNBW2Fyo17iBQ9VF4o5ahEFzyB38BjOv65jxRWsg4UP5I4gev1SgbEIpO4VrRvs1cDFEzGRHEylAqWB6-pee*-xZ2y76yqt33wFcq5U3hDSQrkJnG4I5-\_np8gN7Ntb",
+              "title": "ilovehue.co",
+              "domain": "vertexaisearch.cloud.google.com"
+            },
+            {
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG22MqYUv-KlQnqE1pK2VJUvUdd6SMMYRKJIEVY-9nkQmpREhxMjIfUTi5vySO32Qk4sgo26l4RA9KWSx4uuXndd4-vZbTTsE8KH7t0s1qxWJfrHqmna7MYXJdOtT_eZVlt6V_piJxAMXhLvR_S348AbuCnKLHcVPKtRXInRKdTjA_CWkBZWrIthZ2v-TU9LCIt_TQZg6hCDg==",
+              "title": "bungalowwebdesign.com",
+              "domain": "vertexaisearch.cloud.google.com"
+            }
+          ],
+          "brands": [],
+          "targetBrandFound": false,
+          "targetBrandMentions": 0
+        }
+      ]
+    },
+    "chatgpt": {
+      "llm": "chatgpt",
+      "visibilityScore": 0,
+      "marketShare": 0,
+      "totalPrompts": 0,
+      "promptsWithBrand": 0,
+      "brandRanking": [],
+      "citationDomains": [],
+      "perPromptResults": []
+    },
+    "combinedBrandRanking": [
+      { "name": "adobe color", "mentions": 2, "share": 9.523809523809524 },
+      { "name": "paletton", "mentions": 2, "share": 9.523809523809524 },
+      { "name": "coolors.co", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "dribbble", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "pinterest", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "awwwards", "mentions": 1, "share": 4.761904761904762 },
+      {
+        "name": "webaim contrast checker",
+        "mentions": 1,
+        "share": 4.761904761904762
+      },
+      { "name": "coolors", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "colorspace", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "wixel", "mentions": 1, "share": 4.761904761904762 },
+      {
+        "name": "muzli ai color combination generator",
+        "mentions": 1,
+        "share": 4.761904761904762
+      },
+      { "name": "palettemaker", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "canva", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "color hunt", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "schemecolor.com", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "gelato", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "vistaprint", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "moo print", "mentions": 1, "share": 4.761904761904762 },
+      { "name": "davey & krista", "mentions": 1, "share": 4.761904761904762 }
+    ],
+    "combinedCitationDomains": [
+      { "domain": "vertexaisearch.cloud.google.com", "count": 34 }
+    ]
+  }
+}

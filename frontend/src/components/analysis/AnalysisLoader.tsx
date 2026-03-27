@@ -5,56 +5,46 @@ import { Card } from '@/components/ui/card';
 import LoadingGif from '@/assets/Loading.gif';
 import AnimationGif from '@/assets/animation.gif';
 import DotGrid from '@/components/DotGrid';
-
-interface Step {
-  id: string;
-  label: string;
-  description: string;
-  duration: number;
-}
+import { useProgressTracking } from '@/hooks/ui/useProgressTracking';
+import type { AnalysisStage } from '@/types';
 
 interface AnalysisLoaderProps {
   url: string;
-  onComplete?: () => void;
+  currentStage: AnalysisStage | null;
+  progress: number;
 }
 
-export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+export function AnalysisLoader({ url, currentStage, progress }: AnalysisLoaderProps) {
   const [currentFactIndex, setCurrentFactIndex] = useState(0);
+  
 
-  const steps: Step[] = [
+  const progressInfo = useProgressTracking(currentStage);
+
+  const steps = [
     {
       id: 'analyzing',
       label: 'Analyzing website',
       description: 'Scanning your website content and structure...',
-      duration: 2000,
+      stageMatch: ['Crawling website', 'Crawling done']
     },
     {
       id: 'generating',
       label: 'Generating prompts',
-      description: 'Creating 5 AI prompts across buying journey stages...',
-      duration: 2500,
+      description: 'Creating AI prompts across buying journey stages...',
+      stageMatch: ['Generating relevant prompts', 'Prompts generated']
     },
     {
-      id: 'querying-openai',
-      label: 'Querying ChatGPT',
-      description: 'Testing prompts with OpenAI ChatGPT...',
-      duration: 3000,
-    },
-    {
-      id: 'querying-gemini',
-      label: 'Querying Gemini',
-      description: 'Testing prompts with Google Gemini...',
-      duration: 3000,
+      id: 'querying',
+      label: 'Querying AI models',
+      description: 'Testing prompts with ChatGPT and Gemini...',
+      stageMatch: ['Querying Gemini & ChatGPT']
     },
     {
       id: 'calculating',
       label: 'Calculating scores',
       description: 'Analyzing brand mentions and citations...',
-      duration: 2000,
-    },
+      stageMatch: ['Calculating scores']
+    }
   ];
 
   const facts = [
@@ -85,63 +75,32 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
   ];
 
   useEffect(() => {
-    let stepTimer: ReturnType<typeof setTimeout>;
-    let progressTimer: ReturnType<typeof setTimeout>;
-
-    const totalDuration = steps.reduce((sum, step) => sum + step.duration, 0);
-    const progressPerMs = 100 / totalDuration;
-
-
-    const startTime = Date.now();
-    const animateProgress = () => {
-      const elapsed = Date.now() - startTime;
-      const newProgress = Math.min((elapsed * progressPerMs), 100);
-      setProgress(newProgress);
-
-      if (newProgress < 100) {
-        progressTimer = setTimeout(animateProgress, 50);
-      }
-    };
-
-    animateProgress();
-
-
-    const progressSteps = async () => {
-      for (let i = 0; i < steps.length; i++) {
-        setCurrentStep(i);
-        await new Promise(resolve => {
-          stepTimer = setTimeout(() => {
-            setCompletedSteps(prev => [...prev, i]);
-            resolve(null);
-          }, steps[i].duration);
-        });
-      }
-      
-
-      if (onComplete) {
-        setTimeout(onComplete, 500);
-      }
-    };
-
-    progressSteps();
-
-    return () => {
-      clearTimeout(stepTimer);
-      clearTimeout(progressTimer);
-    };
-  }, [onComplete]);
-
-  useEffect(() => {
     const factInterval = setInterval(() => {
       setCurrentFactIndex((prev) => (prev + 1) % facts.length);
-    }, 3000); // Change fact every 3 seconds
+    }, 3000);
 
     return () => clearInterval(factInterval);
   }, [facts.length]);
 
-  const getStepStatus = (index: number) => {
-    if (completedSteps.includes(index)) return 'completed';
-    if (index === currentStep) return 'active';
+
+  const getStepStatus = (step: typeof steps[0]) => {
+    if (!currentStage) return 'pending';
+    
+    const baseStage = currentStage.replace(/for prompt \d+\/\d+/, '').trim();
+    
+
+    if (step.stageMatch.some(match => baseStage.includes(match))) {
+      return 'active';
+    }
+    
+   
+    const stepIndex = steps.indexOf(step);
+    const progressThresholds = [20, 40, 95, 100];
+    
+    if (progress > progressThresholds[stepIndex]) {
+      return 'completed';
+    }
+    
     return 'pending';
   };
 
@@ -179,18 +138,23 @@ export function AnalysisLoader({ url, onComplete }: AnalysisLoaderProps) {
           <div className="mb-8">
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-medium text-slate-700">
-                {steps[currentStep]?.label}
+                {progressInfo.label}
               </span>
               <span className="text-sm font-medium text-primary">
                 {Math.round(progress)}%
               </span>
             </div>
             <Progress value={progress} className="h-3" />
+            {progressInfo.promptProgress && (
+              <p className="text-xs text-slate-500 mt-2 text-center">
+                Testing prompt {progressInfo.promptProgress.current} of {progressInfo.promptProgress.total}
+              </p>
+            )}
           </div>
 
           <div className="space-y-2">
-            {steps.map((step, index) => {
-              const status = getStepStatus(index);
+            {steps.map((step) => {
+              const status = getStepStatus(step);
               
               return (
                 <div

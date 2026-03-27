@@ -13,9 +13,7 @@ interface LandingPageProps {
 export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) {
   return (
     <div>
-      {/* Hero Section - Dark Background with DotGrid */}
       <section className="relative bg-linear-to-b from-slate-900 to-slate-800 text-white overflow-hidden min-h-screen flex items-center">
-        {/* DotGrid Background */}
         <div className="absolute inset-0">
           <DotGrid
             dotSize={2}
@@ -30,10 +28,8 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
           />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 w-full">
           <div className="mx-auto max-w-4xl">
-            {/* Title */}
             <div className="text-center space-y-4 mb-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Free LLM Visibility Tool
@@ -44,7 +40,6 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
               </p>
             </div>
 
-            {/* AI Provider Logos */}
             <div className="flex items-center justify-center gap-8 mb-8">
               <div className="flex items-center gap-3 text-sm text-slate-300">
                 <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center backdrop-blur-sm">
@@ -60,12 +55,10 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
               </div>
             </div>
 
-            {/* URL Input Form */}
             <div className="mb-6">
               <URLInputForm onSubmit={onAnalyze} isLoading={isLoading} />
             </div>
 
-            {/* Trust Indicators */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
               <div className="flex items-center gap-2 text-white">
                 <div className="w-1.5 h-1.5 rounded-full bg-white" />
@@ -84,7 +77,6 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
         </div>
       </section>
 
-      {/* How It Works Section - Light Background */}
       <section id="how-it-works" className="bg-white py-16 md:py-24 min-h-screen flex items-center">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-6xl">
@@ -95,11 +87,8 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
               </h2>
             </div>
 
-            {/* Steps */}
             <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-              {/* Step 1 */}
               <Card className="relative p-8 bg-linear-to-br from-slate-50 to-white border border-slate-200 rounded-3xl hover:shadow-xl transition-all duration-300">
-                {/* Large Number */}
                 <div className="text-8xl font-bold text-slate-300 mb-8">01</div>
                 
                 <div className="space-y-4 -mt-12">
@@ -114,7 +103,6 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
                     Simply enter your website URL. We'll <span className="font-semibold text-slate-900">analyze your content</span> to understand your business domain and automatically <span className="font-semibold text-slate-900">generate 5 AI prompts</span> representing different buying journey stages that potential customers might ask.
                   </p>
 
-                  {/* Visual Mockup */}
                   <div className="mt-6 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center border border-slate-200">
@@ -144,9 +132,7 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
                 </div>
               </Card>
 
-              {/* Step 2 */}
               <Card className="relative p-8 bg-linear-to-br from-slate-50 to-white border border-slate-200 rounded-3xl hover:shadow-xl transition-all duration-300">
-                {/* Large Number */}
                 <div className="text-8xl font-bold text-slate-300 mb-8">02</div>
                 
                 <div className="space-y-4 -mt-12">
@@ -161,7 +147,6 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
                     We send each generated prompt to <span className="font-semibold text-slate-900">ChatGPT and Gemini</span>, analyzing their responses to calculate your <span className="font-semibold text-slate-900">visibility score</span>, track <span className="font-semibold text-slate-900">brand mentions</span>, and identify <span className="font-semibold text-slate-900">citation sources</span> where LLMs get their information.
                   </p>
 
-                  {/* Visual Mockup */}
                   <div className="mt-6 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
                     <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-100">
                       <div className="flex gap-1">
@@ -197,9 +182,8 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
                 </div>
               </Card>
 
-              {/* Step 3 */}
+
               <Card className="relative p-8 bg-linear-to-br from-slate-50 to-white border border-slate-200 rounded-3xl hover:shadow-xl transition-all duration-300">
-                {/* Large Number */}
                 <div className="text-8xl font-bold text-slate-300 mb-8">03</div>
                 
                 <div className="space-y-4 -mt-12">
@@ -214,7 +198,7 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
                     View your comprehensive report with <span className="font-semibold text-slate-900">visibility scores</span>, <span className="font-semibold text-slate-900">brand mention rankings</span>, <span className="font-semibold text-slate-900">citation sources</span>, and <span className="font-semibold text-slate-900">actionable recommendations</span> like creating articles, engaging on Reddit, or updating Wikipedia.
                   </p>
 
-                  {/* Visual Mockup */}
+
                   <div className="mt-6 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
                     <div className="flex items-center justify-between mb-4">
                       <div>
@@ -267,7 +251,6 @@ export function LandingPage({ onAnalyze, isLoading = false }: LandingPageProps) 
               </Card>
             </div>
 
-            {/* Additional Info */}
             <div className="mt-12 text-center">
               <p className="text-sm text-slate-500">
                 Analysis typically takes 30-60 seconds

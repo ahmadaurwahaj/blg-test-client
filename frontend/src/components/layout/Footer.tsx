@@ -9,16 +9,11 @@ export function Footer() {
               Analyze how ChatGPT and Gemini recommend your brand
             </p>
           </div>
-          
-          <div className="flex items-center gap-6 text-xs">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Contact</a>
-          </div>
+        
         </div>
         
         <div className="mt-6 pt-6 border-t border-slate-800 text-center text-xs">
-          <p>© 2026 LLM Visibility. All rights reserved.</p>
+          <p>© 2026 Ahmad Wahaj. All rights reserved.</p>
         </div>
       </div>
     </footer>

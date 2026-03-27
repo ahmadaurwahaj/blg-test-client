@@ -5,21 +5,27 @@ import { SummaryCards } from "@/components/results/SummaryCards"
 import { VisibilityComparison } from "@/components/results/VisibilityComparison"
 import { BrandMentionsTable } from "@/components/results/BrandMentionsTable"
 import { CitationAnalysis } from "@/components/results/CitationAnalysis"
-import type { AnalysisResults } from "@/types"
+import { useLLMComparison } from "@/hooks/data/useLLMComparison"
+import type { AnalysisResults, CombinedAPIResponse } from "@/types"
 
 interface ResultsPageProps {
   results: AnalysisResults
+  combinedData: CombinedAPIResponse | null
   onBack?: () => void
 }
 
-export function ResultsPage({ results, onBack }: ResultsPageProps) {
+export function ResultsPage({ results, combinedData, onBack }: ResultsPageProps) {
   const { theme, setTheme } = useTheme()
+  
+
+  const { selectedView, viewData, comparison, switchView } = useLLMComparison(combinedData)
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark")
   }
 
-  const { apiResponse } = results
+
+  const displayData = viewData || results.apiResponse
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
@@ -28,7 +34,7 @@ export function ResultsPage({ results, onBack }: ResultsPageProps) {
           <div className="flex items-center justify-between">
             <button
               onClick={onBack}
-              className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              className="flex items-center gap-2 transition-opacity hover:opacity-80 cursor-pointer"
             >
               <span className="text-lg font-semibold text-white">
                 LLM Visibility
@@ -61,6 +67,44 @@ export function ResultsPage({ results, onBack }: ResultsPageProps) {
       </header>
 
       <div className="container mx-auto px-4 py-8">
+    
+        {comparison && (
+          <div className="mb-6 flex justify-center">
+            <div className="inline-flex rounded-lg border border-slate-200 dark:border-slate-800 p-1 bg-white dark:bg-slate-900">
+              <button
+                onClick={() => switchView('combined')}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  selectedView === 'combined'
+                    ? 'bg-primary text-white'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+                }`}
+              >
+                Combined
+              </button>
+              <button
+                onClick={() => switchView('gemini')}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  selectedView === 'gemini'
+                    ? 'bg-primary text-white'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+                }`}
+              >
+                Gemini
+              </button>
+              <button
+                onClick={() => switchView('chatgpt')}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  selectedView === 'chatgpt'
+                    ? 'bg-primary text-white'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+                }`}
+              >
+                ChatGPT
+              </button>
+            </div>
+          </div>
+        )}
+
         <div className="space-y-8">
           <section>
             <div className="mb-6">
@@ -72,26 +116,28 @@ export function ResultsPage({ results, onBack }: ResultsPageProps) {
               </p>
             </div>
             <SummaryCards
-              apiResponse={apiResponse}
+              apiResponse={displayData}
+              comparison={comparison}
               targetBrand={results.targetBrand}
             />
           </section>
 
           <section>
             <BrandMentionsTable
-              brandRanking={apiResponse.brandRanking}
+              brandRanking={displayData.brandRanking}
               targetBrand={results.targetBrand}
+              visibilityScore={displayData.visibilityScore}
             />
           </section>
 
           <section>
             <VisibilityComparison
-              perPromptResults={apiResponse.perPromptResults}
+              perPromptResults={displayData.perPromptResults}
             />
           </section>
 
           <section>
-            <CitationAnalysis citationDomains={apiResponse.citationDomains} />
+            <CitationAnalysis citationDomains={displayData.citationDomains} />
           </section>
         </div>
       </div>

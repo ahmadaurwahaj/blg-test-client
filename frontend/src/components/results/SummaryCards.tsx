@@ -1,13 +1,14 @@
 import { TrendingUp, MessageSquare, Building2, Link, Target } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import type { APIAnalysisResponse } from '@/types';
+import type { APIAnalysisResponse, CombinedAPIResponse } from '@/types';
 
 interface SummaryCardsProps {
   apiResponse: APIAnalysisResponse;
+  comparison?: CombinedAPIResponse['comparison'] | null;
   targetBrand: string;
 }
 
-export function SummaryCards({ apiResponse, targetBrand }: SummaryCardsProps) {
+export function SummaryCards({ apiResponse, comparison, targetBrand }: SummaryCardsProps) {
   const getTrendColor = (value: number) => {
     if (value >= 60) return 'text-emerald-600 dark:text-emerald-400';
     if (value >= 30) return 'text-orange-600 dark:text-orange-400';

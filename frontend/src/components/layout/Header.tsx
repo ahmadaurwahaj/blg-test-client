@@ -1,7 +1,6 @@
 
 export function Header() {
 
-  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,7 +20,7 @@ export function Header() {
           <nav className="flex items-center gap-6 text-sm text-slate-400">
             <button 
               onClick={() => scrollToSection('how-it-works')}
-              className="hidden md:block hover:text-white transition-colors"
+              className="hidden md:block hover:text-white transition-colors cursor-pointer"
             >
               How it works
             </button>

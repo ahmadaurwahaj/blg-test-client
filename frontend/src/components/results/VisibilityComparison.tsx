@@ -58,7 +58,7 @@ export function VisibilityComparison({ perPromptResults }: VisibilityComparisonP
             value={`item-${index}`}
             className="border dark:border-slate-800 rounded-lg overflow-hidden transition-all hover:border-slate-300 dark:hover:border-slate-700"
           >
-            <AccordionTrigger className="px-4 py-3 hover:no-underline hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+            <AccordionTrigger className="px-4 py-3 hover:no-underline hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors cursor-pointer">
               <div className="flex items-center justify-between w-full pr-4">
                 <div className="flex items-center gap-3 flex-1 min-w-0">
                   <Badge className={`${getStageColor(result.stage)} shrink-0`}>
@@ -151,7 +151,7 @@ export function VisibilityComparison({ perPromptResults }: VisibilityComparisonP
                             href={citation.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-start gap-2 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg border border-transparent hover:border-primary/50 dark:hover:border-primary/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all group"
+                            className="flex items-start gap-2 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg border border-transparent hover:border-primary/50 dark:hover:border-primary/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all group cursor-pointer"
                           >
                             <ExternalLink className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 shrink-0 mt-0.5 group-hover:text-primary transition-colors" />
                             <div className="flex-1 min-w-0">
